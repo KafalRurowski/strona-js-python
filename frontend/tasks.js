@@ -22,7 +22,7 @@ document.getElementById("task").innerText = task.question;
 function check() {
     const code = document.getElementById("solution").value;
 
-    fetch("http://127.0.0.1:5000/run-python", {
+    fetch("https://strona-js-python.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code })
@@ -37,4 +37,5 @@ function check() {
                 "\n\nPodpowiedź:\n" + task.hint;
         }
     });
+
 }
