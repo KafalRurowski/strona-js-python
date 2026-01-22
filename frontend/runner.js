@@ -1,7 +1,7 @@
 function runCode() {
     const code = document.getElementById("code").value;
 
-    fetch("http://127.0.0.1:5000/run-python", {
+    fetch("https://strona-js-python.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code })
@@ -11,4 +11,5 @@ function runCode() {
         document.getElementById("output").innerText = data.output || "";
         document.getElementById("error").innerText = data.error || "";
     });
+
 }
